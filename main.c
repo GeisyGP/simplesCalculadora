@@ -10,7 +10,7 @@ void soma(){
 	scanf ("%f", &num2);
 	
 	resultado = num1 + num2;
-	printf ("\nO resultado é %.2f", resultado);
+	printf ("\nO resultado é %.2f\n\n", resultado);
 }
 
 void subtracao(){
@@ -22,7 +22,7 @@ void subtracao(){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 - num2;
-	printf ("\nO resultado é %.2f", resultado);
+	printf ("\nO resultado é %.2f\n\n", resultado);
 }
 
 void multiplicacao(){
@@ -33,7 +33,7 @@ void multiplicacao(){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 * num2;	
-	printf ("\nO resultado é %.2f", resultado);
+	printf ("\nO resultado é %.2f\n\n", resultado);
 }
 
 void divisao (){
@@ -45,7 +45,7 @@ void divisao (){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 / num2;	
-	printf ("\nO resultado é %.2f", resultado);	
+	printf ("\nO resultado é %.2f\n\n", resultado);	
 }
 
 void potencia(){
@@ -57,7 +57,7 @@ void potencia(){
 	scanf ("%d", &num2);
 			
 	resultado = pow(num1, num2);
-	printf ("\nO resultado é %d", resultado);
+	printf ("\nO resultado é %d\n\n", resultado);
 }
 
 void divisaoResto(){
@@ -70,7 +70,7 @@ void divisaoResto(){
 			
 	divisao = num1 / num2;
 	resto = num1 % num2;
-	printf ("O resultado é %d com resto %d", divisao, resto);
+	printf ("O resultado é %d com resto %d\n\n", divisao, resto);
 }
 
 void primo(){
@@ -96,7 +96,7 @@ void primo(){
 int menu (int op){
 	printf ("******Menu******");
 	printf ("\n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Dividir \n5 - Potência");
-	printf ("\n6 - Divisão com resto \n7 - Verificar se o número é primo");
+	printf ("\n6 - Divisão com resto \n7 - Verificar se o número é primo \n0 - Encerrar");
 	printf ("\nInforme sua opção: ");
 	scanf ("%d", &op);
 	return op;
@@ -104,40 +104,46 @@ int menu (int op){
 
 main (void){
 	setlocale(LC_ALL, "Portuguese");
-	int op;
+	int op = 1;
 
-	op = menu(op);
-	switch (op){
-		case 1:
-			soma();
-		break;
+	while (op != 0){
+		op = menu(op);
+		switch (op){
+			case 1:
+				soma();
+			break;
 
-		case 2:
-			subtracao();
-		break;
-		
-		case 3:
-			multiplicacao();	
-		break;
-		
-		case 4:
-			divisao();
-		break;
-		
-		case 5:
-			potencia();
-		break;	
+			case 2:
+				subtracao();
+			break;
 			
-		case 6:
-			divisaoResto();
-		break;
+			case 3:
+				multiplicacao();	
+			break;
+			
+			case 4:
+				divisao();
+			break;
+			
+			case 5:
+				potencia();
+			break;	
+				
+			case 6:
+				divisaoResto();
+			break;
 
-		case 7:
-			primo();
-		break;
+			case 7:
+				primo();
+			break;
 
-		default:
-			printf ("Opção inválida!");
-		break;
+			case 0:
+				printf ("encerrando...");
+			break;
+
+			default:
+				printf ("Opção inválida!\n");
+			break;
+		}
 	}
 }
