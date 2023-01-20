@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
 
 main (void){
 	setlocale(LC_ALL, "Portuguese");
-	float num1, num2, soma, subtracao, multiplicacao, divisao;
+	float num1, num2, soma, subtracao, multiplicacao, divisao, potencia;
 	
-	printf ("Informe o primeiro e o segundo número: ");
+	printf ("Informe o primeiro e o segundo nÃºmero: ");
 	scanf ("%f", &num1);
 	scanf ("%f", &num2);
 	
@@ -13,9 +14,11 @@ main (void){
 	subtracao = num1 - num2;
 	multiplicacao = num1 * num2;
 	divisao = num1 / num2;
+	potencia = pow(num1, num2);
 	
 	printf ("\nSoma: %.2f", soma);
-	printf ("\nSubtração: %.2f", subtracao);
-	printf ("\nMultiplicação: %.2f", multiplicacao);
-	printf ("\nDivisão: %.2f", divisao);
+	printf ("\nSubtraÃ§Ã£o: %.2f", subtracao);
+	printf ("\nMultiplicaÃ§Ã£o: %.2f", multiplicacao);
+	printf ("\nDivisÃ£o: %.2f", divisao);
+	printf ("\nPotencia: %.2f", potencia);
 }
