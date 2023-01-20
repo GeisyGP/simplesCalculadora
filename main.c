@@ -73,10 +73,30 @@ void divisaoResto(){
 	printf ("O resultado é %d com resto %d", divisao, resto);
 }
 
+void primo(){
+	int num, i, cont = 0;
+	
+	printf("\nInforme um número: ");
+	scanf("%d", &num);
+ 
+ 	for (i = 2; i <= num/2; i++){
+		if (num % i == 0) {
+		    cont++;
+ 	}
+ }
+ 
+	if (cont == 0){
+		printf("\n%d é um número primo\n\n", num);
+ 	}
+	else{
+	    printf("\n%d não é um número primo\n\n", num);	
+	}	
+}
+
 int menu (int op){
 	printf ("******Menu******");
 	printf ("\n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Dividir \n5 - Potência");
-	printf ("\n6 - Divisão com resto");
+	printf ("\n6 - Divisão com resto \n7 - Verificar se o número é primo");
 	printf ("\nInforme sua opção: ");
 	scanf ("%d", &op);
 	return op;
@@ -111,7 +131,11 @@ main (void){
 		case 6:
 			divisaoResto();
 		break;
-			
+
+		case 7:
+			primo();
+		break;
+
 		default:
 			printf ("Opção inválida!");
 		break;
