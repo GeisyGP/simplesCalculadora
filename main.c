@@ -60,9 +60,23 @@ void potencia(){
 	printf ("\nO resultado é %d", resultado);
 }
 
+void divisaoResto(){
+	int num1, num2, divisao, resto;
+	
+	printf ("Informe o dividendo: ");
+	scanf ("%d", &num1);
+	printf ("Informe o divisor: ");
+	scanf ("%d", &num2);
+			
+	divisao = num1 / num2;
+	resto = num1 % num2;
+	printf ("O resultado é %d com resto %d", divisao, resto);
+}
+
 int menu (int op){
 	printf ("******Menu******");
 	printf ("\n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Dividir \n5 - Potência");
+	printf ("\n6 - Divisão com resto");
 	printf ("\nInforme sua opção: ");
 	scanf ("%d", &op);
 	return op;
@@ -93,7 +107,11 @@ main (void){
 		case 5:
 			potencia();
 		break;	
-		
+			
+		case 6:
+			divisaoResto();
+		break;
+			
 		default:
 			printf ("Opção inválida!");
 		break;
