@@ -10,7 +10,7 @@ void soma(){
 	scanf ("%f", &num2);
 	
 	resultado = num1 + num2;
-	printf ("\nO resultado Ã© %.2f\n\n", resultado);
+	printf ("\nResultado: %.2f\n\n", resultado);
 }
 
 void subtracao(){
@@ -22,7 +22,7 @@ void subtracao(){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 - num2;
-	printf ("\nO resultado Ã© %.2f\n\n", resultado);
+	printf ("\nResultado: %.2f\n\n", resultado);
 }
 
 void multiplicacao(){
@@ -33,7 +33,7 @@ void multiplicacao(){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 * num2;	
-	printf ("\nO resultado Ã© %.2f\n\n", resultado);
+	printf ("\nResultado: %.2f\n\n", resultado);
 }
 
 void divisao (){
@@ -45,7 +45,7 @@ void divisao (){
 	scanf ("%f", &num2);			
 	
 	resultado = num1 / num2;	
-	printf ("\nO resultado Ã© %.2f\n\n", resultado);	
+	printf ("\nResultado: %.2f\n\n", resultado);	
 }
 
 void potencia(){
@@ -57,7 +57,7 @@ void potencia(){
 	scanf ("%d", &num2);
 			
 	resultado = pow(num1, num2);
-	printf ("\nO resultado Ã© %d\n\n", resultado);
+	printf ("\nResultado: %d\n\n", resultado);
 }
 
 void divisaoResto(){
@@ -70,13 +70,13 @@ void divisaoResto(){
 			
 	divisao = num1 / num2;
 	resto = num1 % num2;
-	printf ("O resultado Ã© %d com resto %d\n\n", divisao, resto);
+	printf ("Resultado: %d com resto %d\n\n", divisao, resto);
 }
 
 void primo(){
 	int num, i, cont = 0;
 	
-	printf("\nInforme um nÃºmero: ");
+	printf("\nInforme um número: ");
 	scanf("%d", &num);
  
  	for (i = 2; i <= num/2; i++){
@@ -86,18 +86,18 @@ void primo(){
  }
  
 	if (cont == 0){
-		printf("\n%d Ã© um nÃºmero primo\n\n", num);
+		printf("\nSim, %d é primo\n\n", num);
  	}
 	else{
-	    printf("\n%d nÃ£o Ã© um nÃºmero primo\n\n", num);	
+	    printf("\nNão, %d não é primo\n\n", num);	
 	}	
 }
 
 int menu (int op){
-	printf ("******Menu******");
-	printf ("\n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Dividir \n5 - PotÃªncia");
-	printf ("\n6 - DivisÃ£o com resto \n7 - Verificar se o nÃºmero Ã© primo \n0 - Encerrar");
-	printf ("\nInforme sua opÃ§Ã£o: ");
+	printf ("*************** MENU ***************");
+	printf ("\n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Dividir \n5 - Potência");
+	printf ("\n6 - Divisão com resto \n7 - Verificar se o número é primo \n0 - Encerrar");
+	printf ("\nInforme sua opção: ");
 	scanf ("%d", &op);
 	return op;
 }
@@ -142,7 +142,7 @@ main (void){
 			break;
 
 			default:
-				printf ("OpÃ§Ã£o invÃ¡lida!\n");
+				printf ("Opção invalida!\n");
 			break;
 		}
 	}
